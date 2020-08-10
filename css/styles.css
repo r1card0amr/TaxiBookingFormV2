@@ -98,6 +98,14 @@ p {
 	color: #F00;
 }
 
+#footer{
+    width: 100%;     
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
 @media (min-width: 1024px){
 
 	form {
@@ -112,5 +120,4 @@ p {
 		grid-gap: 0.8rem 0.5rem;
 		max-width: 700px;
 	}
-
 }
