@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Taxi Booking v2</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div id="pagecontainer">
+		<h1>Taxi Booking</h1>
+		<p>* = required field</p>
+		<form action="confirmation.html" method="POST">
+
+			<!-- Passenger Fieldset -->
+			<fieldset id="passenger">
+				<legend>Passenger Details:</legend>
+				<label for="passengername">Name *</label>
+				<input type="text" name="passengername" id="passengername" required>
+				<label for="phone">Phone *</label>
+				<input type="tel" name="phone" id="phone" required pattern="^0([1-6][0-9]{8,10}|7[0-9]{9})$">
+				<label for="email">Email *</label>
+				<input type="email" name="email" id="email" required>
+				<label for="numpassengers">Number of Passengers *</label>
+				<input type="number" name="numpassengers" id="numpassengers" 
+				min="1" max="8" required>
+			</fieldset>
+
+			<!-- Taxi Fieldset -->
+			<fieldset id="taxi">
+				<legend>Taxi Type:</legend>
+				<label><input type="radio" name="taxitype" id="car" value="car" checked>Car</label>
+				<label><input type="radio" name="taxitype" id="van" value="van">Van</label>
+				<label><input type="radio" name="taxitype" id="estate" value="estate">Estate</label>
+			</fieldset>
+
+			<!-- Extras Fieldset -->
+			<fieldset id="extras">
+				<legend>Extras:</legend>
+				<label><input type="checkbox" name="extrababy" id="baby" value="baby">Baby Seat</label>
+				<label><input type="checkbox" name="extrawheelchair" id="wheelchair" value="wheelchair">
+				Wheelchair Access</label>
+				<label><input type="checkbox" name="extraroofrack" id="roofrack" value="tip">Roof Rack</label>
+			</fieldset>
+
+			<!-- Pickup Fieldset -->
+			<fieldset id="pickup">
+				<legend>Pickup:</legend>
+				<label for="pickuptime">Date/Time *</label>
+				<input type="datetime-local" name="pickuptime" id="pickuptime" required>
+				<label for="pickuppostcode">Postcode *</label>
+				<input type="text" name="pickuppostcode" id="pickuppostcode" required pattern="^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$">
+			</fieldset>
+
+			<!-- Dropoff Fieldset -->
+			<fieldset id="dropoff">
+			<legend>Dropoff:</legend>
+				<label for="dropoffpostcode">Postcode *</label>
+				<input type="text" name="dropoffpostcode" id="dropoffpostcode" required pattern="^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$">
+			</fieldset>
+
+			<!-- Instructions Fieldset -->
+			<fieldset id="instructions">
+				<legend>Special Instructions:</legend>
+				<textarea name="specialinstructions" id="specialinstructions"></textarea>
+			</fieldset>
+			<button id="submit">Submit Booking</button>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
